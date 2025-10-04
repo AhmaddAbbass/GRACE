@@ -1,0 +1,15 @@
+app:
+  host: "0.0.0.0"
+  port: 8000
+  debug: false
+  allow_cors: true
+
+rag:
+  config_path: "../rag/config.yaml"
+  default_mode: "hi"
+  retrieve_top_k: 6
+  answer_top_k: 6
+  include_context: true
+
+logging:
+  level: "INFO"
