@@ -1,8 +1,3 @@
-Here’s a clean, **complete** `README.md` you can drop in the repo.
-I kept your original narrative (with the same image refs) and added a thorough tour of the codebase + step-by-step run instructions.
-
----
-
 # GRACE: Graph-Based Reasoning Across Computational Environments 🧠
 
 ## 👥 Authors
