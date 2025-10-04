@@ -1,0 +1,2 @@
+input_csv: "Food20and20Dataset20Image20Mapping.csv"
+output_txt: "../books/Food20and20Dataset20Image20Mapping.txt"
