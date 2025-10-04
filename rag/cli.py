@@ -39,8 +39,8 @@ def main(argv: list[str] | None = None) -> None:
     )
     parser.add_argument("--skip-dump", action="store_true", help="Skip writing index.json")
     parser.add_argument("--dump-only", action="store_true", help="Only dump index.json without inserting new docs")
-    parser.add_argument("--cache", help="Override cache directory")
-    parser.add_argument("--logdir", help="Override log directory")
+    parser.add_argument("--cache", help="Override knowledge graph folder (.hi_cache parent or the .hi_cache itself)")
+    parser.add_argument("--logdir", help="Override KGs root directory")
     args = parser.parse_args(argv)
 
     overrides = {}
@@ -59,7 +59,7 @@ def main(argv: list[str] | None = None) -> None:
         rag.build_from_file(str(book_path))
 
     if not args.skip_dump:
-        out_dir = Path(overrides.get("logs_path") or rag.cfg["logdir"])
+        out_dir = Path(rag.cfg.get("graph_dir", rag.cfg["logdir"]))
         out_dir.mkdir(parents=True, exist_ok=True)
         out = out_dir / "index.json"
         rag.dump_index(str(out))
@@ -69,3 +69,4 @@ def main(argv: list[str] | None = None) -> None:
 
 if __name__ == "__main__":
     main()
+

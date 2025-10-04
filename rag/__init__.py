@@ -32,6 +32,12 @@ class RAG:
     def __init__(self, config_path: Optional[str] = None, **overrides):
         self.cfg = load_config(config_path, **overrides)
 
+        self.graphs_root = Path(self.cfg.get("graphs_root", self.cfg["cache_dir"])).expanduser().resolve()
+        self.graphs_root.mkdir(parents=True, exist_ok=True)
+
+        self.graph_dir = Path(self.cfg.get("graph_dir", self.cfg.get("logdir", str(self.graphs_root)))).expanduser().resolve()
+        self.graph_dir.mkdir(parents=True, exist_ok=True)
+
         cache_dir = Path(self.cfg["cache_dir"]).expanduser().resolve()
         cache_dir.mkdir(parents=True, exist_ok=True)
 
@@ -48,7 +54,7 @@ class RAG:
             **self.cfg.get("hirag_kwargs", {}),
         )
 
-        self.logdir = Path(self.cfg["logdir"]).expanduser().resolve()
+        self.logdir = Path(self.cfg.get("logdir", str(self.graph_dir))).expanduser().resolve()
         self.logdir.mkdir(parents=True, exist_ok=True)
 
     # ---- build -----------------------------------------------------------
@@ -79,3 +85,4 @@ class RAG:
     # ---- health ----------------------------------------------------------
     def healthy(self) -> bool:
         return self.runner.health_check()
+

@@ -45,43 +45,77 @@ def load_config(config_path: Optional[Union[str, Path]], **overrides) -> Dict[st
     if cfg_path.exists():
         cfg.update(yaml.safe_load(cfg_path.read_text(encoding="utf-8")) or {})
 
-    cache_root_setting = overrides.get("cache_root") or cfg.get("cache_root")
-    if cache_root_setting:
-        cache_root = _resolve_relative(cache_root_setting, cfg_dir)
-    else:
-        cache_root = (cfg_dir / "cache").resolve()
-
-    cache_dir_setting = overrides.get("cache_dir")
-    if cache_dir_setting:
-        cache_dir = str(_resolve_relative(cache_dir_setting, cfg_dir))
-    else:
-        cache_dir = str(cache_root / "hi" / ".hi_cache")
-
-    logdir_setting = overrides.get("logs_path") or cfg.get("logs_path")
-    if logdir_setting:
-        logdir = str(_resolve_relative(logdir_setting, cfg_dir))
-    else:
-        logdir = str(cache_root / "hi")
+    hi_cfg = (cfg.get("modes", {}).get("hi", {}) or {})
+    mode = str(hi_cfg.get("mode", "hi"))
 
     run_id = overrides.get("run_id") or cfg.get("run_id") or "rag_run"
-    mode = (cfg.get("modes", {}).get("hi", {}) or {}).get("mode", "hi")
-    hi = cfg.get("modes", {}).get("hi", {})
-    default_emb_cfg = cfg.get("default_embedding", {}) or {}
 
+    logs_path_setting = overrides.get("logs_path")
+    if logs_path_setting is None:
+        logs_path_setting = cfg.get("logs_path")
+
+    cache_dir_setting = overrides.get("cache_dir") or cfg.get("cache_dir")
+    legacy_cache_root_setting = overrides.get("cache_root") or cfg.get("cache_root")
+
+    logs_root: Optional[Path] = None
+    if logs_path_setting:
+        logs_root = _resolve_relative(logs_path_setting, cfg_dir)
+
+    if cache_dir_setting:
+        raw_cache_dir = _resolve_relative(cache_dir_setting, cfg_dir)
+    elif legacy_cache_root_setting:
+        raw_cache_dir = _resolve_relative(legacy_cache_root_setting, cfg_dir)
+    elif logs_root is not None:
+        raw_cache_dir = logs_root
+    else:
+        raw_cache_dir = (cfg_dir / "kgs").resolve()
+
+    raw_cache_dir = Path(raw_cache_dir)
+
+    if raw_cache_dir.name == ".hi_cache":
+        cache_dir_path = raw_cache_dir
+        graph_dir_path = raw_cache_dir.parent
+        graph_root_path = graph_dir_path.parent
+    elif len(raw_cache_dir.parts) >= 2 and raw_cache_dir.parts[-2:] == (mode, ".hi_cache"):
+        cache_dir_path = raw_cache_dir
+        graph_dir_path = raw_cache_dir.parent
+        graph_root_path = graph_dir_path.parent
+    elif raw_cache_dir.name == mode:
+        graph_dir_path = raw_cache_dir
+        cache_dir_path = graph_dir_path / ".hi_cache"
+        graph_root_path = graph_dir_path.parent
+    else:
+        graph_root_path = raw_cache_dir
+        graph_dir_path = graph_root_path / mode
+        cache_dir_path = graph_dir_path / ".hi_cache"
+
+    if logs_root is None:
+        logs_root = graph_root_path
+    else:
+        logs_root = Path(logs_root)
+
+    cache_dir_path = cache_dir_path.resolve()
+    graph_dir_path = graph_dir_path.resolve()
+    graphs_root_path = logs_root.resolve()
+
+    default_emb_cfg = cfg.get("default_embedding", {}) or {}
     embedding_func = overrides.get("embedding_func") or make_default_embedding(default_emb_cfg)
 
     out = {
         "run_id": run_id,
         "mode": mode,
-        "cache_dir": cache_dir,
-        "logdir": logdir,
+        "graphs_root": str(graphs_root_path),
+        "graph_dir": str(graph_dir_path),
+        "cache_root": str(graph_root_path.resolve()),
+        "cache_dir": str(cache_dir_path),
+        "logdir": str(graph_dir_path),
         "embedding_func": embedding_func,
-        "enable_naive_rag": bool(hi.get("enable_naive_rag", True)),
-        "chunk_prefix_len": int(hi.get("chunk_prefix_len", 120)),
-        "node_hit_strategy": str(hi.get("node_hit_strategy", "union")),
-        "log_level": int(hi.get("log_level", 20)),
+        "enable_naive_rag": bool(hi_cfg.get("enable_naive_rag", True)),
+        "chunk_prefix_len": int(hi_cfg.get("chunk_prefix_len", 120)),
+        "node_hit_strategy": str(hi_cfg.get("node_hit_strategy", "union")),
+        "log_level": int(hi_cfg.get("log_level", 20)),
         "hirag_kwargs": {
-            k: hi[k]
+            k: hi_cfg[k]
             for k in (
                 "chunk_func","chunk_token_size","chunk_overlap_token_size",
                 "tiktoken_model_name","graph_cluster_algorithm","max_graph_cluster_size",
@@ -91,8 +125,12 @@ def load_config(config_path: Optional[Union[str, Path]], **overrides) -> Dict[st
                 "query_better_than_threshold","using_azure_openai",
                 "enable_llm_cache"
             )
-            if k in hi
+            if k in hi_cfg
         },
     }
-    out.update({k: v for k, v in overrides.items() if v is not None})
+
+    for key, value in overrides.items():
+        if value is not None:
+            out[key] = value
+
     return out

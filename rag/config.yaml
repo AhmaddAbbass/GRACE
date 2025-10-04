@@ -1,8 +1,12 @@
 # Minimal config for the rag toolkit
 
 run_id: hackathon_demo
-cache_root: "./cache"          # resolves relative to this folder
-logs_path: "./cache/hi"        # index.json goes here
+
+# Root directory that holds every knowledge graph on disk
+logs_path: "./kgs"
+
+# Folder for the active graph you want to read/write (its <mode>/.hi_cache lives inside)
+cache_dir: "./kgs/sample_graph"
 
 main_rag: "hi"
 
@@ -33,3 +37,4 @@ modes:
       random_seed: 3
     enable_hierachical_mode: true
     log_level: 20
+

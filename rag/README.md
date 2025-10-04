@@ -8,14 +8,14 @@ This `rag` folder bundles everything needed to index a pile of `.txt` documents 
    ```env
    OPENAI_API_KEY=sk-...
    ```
-2. Adjust `config.yaml` if you want to change cache locations, switch embedders (`e5` vs `openai`), or tweak HiRAG knobs.
+2. Adjust `config.yaml` if you want to change cache locations, switch embedders (`e5` vs `openai`), or tweak HiRAG knobs. The defaults now write graphs under `kgs/<graph-name>/<mode>/.hi_cache`.
 ### 2. Build an index from books
 1. Drop your `.txt` files into `books/` (the sample `demo.txt` lives there already).
 2. Run the builder (from the repo root or from inside the folder):
    ```bash
    python -m rag.cli --book books/demo.txt
    ```
-   The cache and index land under `cache/` by default, and `cache/hi/index.json` is regenerated unless you pass `--skip-dump`.
+   The knowledge graph cache and index land under `kgs/sample_graph/hi/` by default, and `index.json` is regenerated unless you pass `--skip-dump`.
 ### 3. Use the runner in your own scripts
 ```python
 from rag import RAG
@@ -32,13 +32,14 @@ print(follow_up["answer"])
 ```
 You can override paths at construction time:
 ```python
-rag = RAG(cache_dir="/tmp/rag-cache/hi/.hi_cache", logs_path="/tmp/rag-cache/hi")
+rag = RAG(cache_dir="/tmp/kgs/cooking", logs_path="/tmp/kgs")
 ```
+`cache_dir` can point to the graph folder (the toolkit will create `<mode>/.hi_cache` inside) or directly to an existing `.hi_cache` path. `logs_path` is the root directory that holds every graph and is where new graph folders will be created if you do not override `cache_dir` separately.
 ### 4. Plug into your agent loop
 
 **Instantiate once**
 - `RAG(config_path=None, cache_dir=..., logs_path=..., run_id=...)` loads `config.yaml`, resolves cache/log dirs, and creates a `HiRAGRunner`.
-- Pass overrides such as `RAG(cache_dir='/tmp/hirag', run_id='agent-run')` to keep experiments isolated.
+- Pass overrides such as `RAG(cache_dir='/tmp/kgs/research', run_id='agent-run')` to keep experiments isolated.
 
 **Key methods**
 - `retrieve(query, top_k=8)` returns the structured context dict (`use_text_units`, `use_communities`, `use_reasoning_path`, `node_datas`).
@@ -71,9 +72,10 @@ return reply['answer']
 
 ### CLI extras
 - `python -m rag.cli --dump-only` refreshes `index.json` without inserting new documents.
-- `python -m rag.cli --cache /custom/cache --logdir /custom/logs --book books/my.txt` lets you redirect outputs anywhere.
+- `python -m rag.cli --cache /custom/kgs/graph-name --logdir /custom/kgs --book books/my.txt` lets you redirect where graphs live.
 ### Housekeeping
-- Delete `cache/` if you want a fresh rebuild.
+- Delete `kgs/<graph-name>` if you want a fresh rebuild for that graph.
 - The CLI auto-loads `.env` on first use, so you do not need to export the key manually each run.
 - When using non-OpenAI embeddings, edit `config.yaml` (`default_embedding.class: e5`) and ensure the required model files are available locally.
 See `rag_examples.py` for a comment-heavy walkthrough with additional scenarios.
+
