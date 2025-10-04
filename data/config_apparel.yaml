@@ -1,0 +1,2 @@
+input_json: "Apparel.json"
+output_txt: "../books/Apparel.txt"
