@@ -8,31 +8,17 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# (Optional) native build tools if any wheel needs compiling
-RUN apt-get update && apt-get install -y --no-install-recommends build-essential \
- && rm -rf /var/lib/apt/lists/*
+# lightweight but handy for checks
+RUN apt-get update && apt-get install -y --no-install-recommends curl \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install Python deps first for better caching
-COPY rag/requirements.txt /tmp/requirements.txt
+# Install deps
+COPY requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt gunicorn
 
-# Install server/runtime deps
-# - rag/requirements.txt: your project libs
-# - fastapi+uvicorn: web server (change if you use Flask/other)
-# - pyyaml: read your configs
-RUN pip install --upgrade pip \
- && pip install -r /tmp/requirements.txt fastapi uvicorn pyyaml
-
-# Bring in the source
+# App code
 COPY . .
 
-# Run as non-root
-RUN useradd -m appuser
-USER appuser
-
 EXPOSE 8000
-
-# If server/app.py exposes FastAPI/Starlette "app":
-CMD ["uvicorn", "server.app:app", "--host", "0.0.0.0", "--port", "8000"]
-# If not, swap to:
-# CMD ["python", "-m", "server.app"]
-
+# Run Flask app; binds to all interfaces inside the container
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "server.app:app"]
