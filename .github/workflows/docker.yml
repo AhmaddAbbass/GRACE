@@ -21,7 +21,7 @@ jobs:
             file: ./Dockerfile
           - name: frontend
             image: ghcr.io/ahmaddabbass/grace-frontend
-            context: .
+            context: ./kgx-ui
             file: ./kgx-ui/Dockerfile
 
     steps:

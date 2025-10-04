@@ -8,17 +8,18 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# lightweight but handy for checks
+# optional but handy
 RUN apt-get update && apt-get install -y --no-install-recommends curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install deps
-COPY requirements.txt .
-RUN pip install --upgrade pip && pip install -r requirements.txt gunicorn
+# ✅ install from the real requirements file path
+COPY rag/requirements.txt /tmp/requirements.txt
+RUN pip install --upgrade pip \
+ && pip install -r /tmp/requirements.txt gunicorn
 
-# App code
+# bring in the rest of the code
 COPY . .
 
 EXPOSE 8000
-# Run Flask app; binds to all interfaces inside the container
+# run Flask via gunicorn, bind to all interfaces
 CMD ["gunicorn", "-b", "0.0.0.0:8000", "server.app:app"]
