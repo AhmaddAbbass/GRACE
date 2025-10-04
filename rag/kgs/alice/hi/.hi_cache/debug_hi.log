@@ -1,0 +1,6 @@
+2025-10-04 16:30:34,713 INFO: [INIT] HiRAGRunner mode=hi run_id=hackathon_demo
+2025-10-04 16:30:34,714 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 16:30:34,715 WARNING: [INIT] KV-store missing; run build_index
+2025-10-04 16:30:34,716 INFO: [build_index] inserting 1 docs
+2025-10-04 16:30:34,716 INFO: [build_index] disabling hierarchical mode for small batch
+2025-10-04 16:31:21,676 INFO: [INIT] KV-store loaded 1 chunks

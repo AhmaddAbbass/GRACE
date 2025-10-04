@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "run_id": "hackathon_demo",
+    "ts": "2025-10-04T13:31:21.690881"
+  },
+  "chunks": {
+    "chunk-8795e9750b7e4f1a17bb00382ea20c9c": {
+      "tokens": 349,
+      "content": "Recipe: Roasted Peppers And Mushroom Tortilla Pizza Recipe. \nCuisine: Mexican. Course: Dinner. Diet type: Vegetarian.  \nCategory: Pizza Recipes.  \nPreparation Time: {prep_time}\nCooking Time: {cook_time}\n\nIngredients:\nTortillas, Extra Virgin Olive Oil, Garlic, Mozzarella cheese, Red Yellow or Green Bell Pepper (Capsicum), Onions, Kalmatta olives, Button mushrooms. \n\nInstructions:\nTo begin making the Roasted Peppers And Mushroom Tortilla Pizza recipe, turn your oven setting to broiler and keep it ready. Grease your cast iron skillet with some olive oil and heat it over high heat. When it starts to shimmer bring down the heat to medium. Add olive oil and minced garlic to the marinara sauce and stir to combine, keep aside. Place one tortilla on the cast iron skillet. Spread a thin layer of marinara sauce over the tortilla. Spread the cheese as needed. When the cheese starts to melt, add in the toppings which includes onion, mushrooms, olives and bell peppers. Now shift the cast iron skillet to the oven which is already under broiler setting. When you see the cheese all melted and top starting to brown, remove and slice to serve. ServeÂ Roasted Peppers And Mushroom Tortilla PizzaÂ along withÂ |Â andÂ |Â for a weekend night dinner.. \n\nSummary:\nThis recipe belongs to the Mexican cuisine and is typically served as Dinner.  \nIt is a Vegeterian dish that uses Tortillas, Extra Virgin Olive Oil, Garlic, among other ingredients.\nReference: https://www.archanaskitchen.com/roasted-peppers-and-mushroom-tortilla-pizza-recipe",
+      "chunk_order_index": 0,
+      "full_doc_id": "doc-8795e9750b7e4f1a17bb00382ea20c9c"
+    }
+  },
+  "entity_graph": {
+    "nodes": [
+      {
+        "id": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "label": "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA",
+        "kind": "\"recipe\"",
+        "level": 0,
+        "degree": 16,
+        "betweenness": 1.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"RECIPE\"",
+        "description": "\"A tortilla-based skillet pizza featuring roasted vegetables and mozzarella, typically served as a vegetarian dinner.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"TORTILLAS\"",
+        "label": "TORTILLAS",
+        "kind": "\"ingredient\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"INGREDIENT\"",
+        "description": "\"Flatbreads used as the base for the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"EXTRA VIRGIN OLIVE OIL\"",
+        "label": "EXTRA VIRGIN OLIVE OIL",
+        "kind": "\"ingredient\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"INGREDIENT\"",
+        "description": "\"High-quality oil used for greasing the skillet and sautéing.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"GARLIC\"",
+        "label": "GARLIC",
+        "kind": "\"ingredient\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"INGREDIENT\"",
+        "description": "\"A common seasoning used in the marinara sauce.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"MOZZARELLA CHEESE\"",
+        "label": "MOZZARELLA CHEESE",
+        "kind": "\"ingredient\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"INGREDIENT\"",
+        "description": "\"Cheese that melts and provides texture and flavor when baked.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"RED YELLOW OR GREEN BELL PEPPER (CAPSICUM)\"",
+        "label": "RED YELLOW OR GREEN BELL PEPPER (CAPSICUM)",
+        "kind": "\"ingredient\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"INGREDIENT\"",
+        "description": "\"Sweet peppers that add color and flavor to the dish.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"ONIONS\"",
+        "label": "ONIONS",
+        "kind": "\"ingredient\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"INGREDIENT\"",
+        "description": "\"Vegetable added for sweetness and texture in the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"KALAMATA OLIVES\"",
+        "label": "KALAMATA OLIVES",
+        "kind": "\"ingredient\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"INGREDIENT\"",
+        "description": "\"Salty olives that provide a briny flavor to the pizza toppings.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"BUTTON MUSHROOMS\"",
+        "label": "BUTTON MUSHROOMS",
+        "kind": "\"ingredient\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"INGREDIENT\"",
+        "description": "\"Mushrooms that add earthiness and texture to the dish.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"CAST IRON SKILLET\"",
+        "label": "CAST IRON SKILLET",
+        "kind": "\"tool\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"TOOL\"",
+        "description": "\"A heavy skillet used for both cooking and baking the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"BROILER\"",
+        "label": "BROILER",
+        "kind": "\"appliance\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"APPLIANCE\"",
+        "description": "\"An oven feature used to apply high heat from above for browning.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"BROIL\"",
+        "label": "BROIL",
+        "kind": "\"method\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"METHOD\"",
+        "description": "\"A high-heat cooking technique used to brown the top of the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"MEXICAN\"",
+        "label": "MEXICAN",
+        "kind": "\"cuisine\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"CUISINE\"",
+        "description": "\"Cuisine type indicating the style of the recipe.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"DINNER\"",
+        "label": "DINNER",
+        "kind": "\"course\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"COURSE\"",
+        "description": "\"Type of meal during which the dish is served.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"VEGETARIAN\"",
+        "label": "VEGETARIAN",
+        "kind": "\"diet\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"DIET\"",
+        "description": "\"Diet label indicating that the dish contains no meat.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"PREPARATION TIME: {PREP_TIME}\"",
+        "label": "PREPARATION TIME: {PREP_TIME}",
+        "kind": "\"time\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"TIME\"",
+        "description": "\"Placeholder for the explicit preparation duration needed for the recipe.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      },
+      {
+        "id": "\"COOKING TIME: {COOK_TIME}\"",
+        "label": "COOKING TIME: {COOK_TIME}",
+        "kind": "\"time\"",
+        "level": 0,
+        "degree": 1,
+        "betweenness": 0.0,
+        "cluster": 0,
+        "cluster_size": 17,
+        "tags": [],
+        "saved_pos": null,
+        "source_ids": [
+          "chunk-8795e9750b7e4f1a17bb00382ea20c9c"
+        ],
+        "entity_type": "\"TIME\"",
+        "description": "\"Placeholder for the explicit cooking duration needed for the recipe.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "clusters": "[{\"level\": 0, \"cluster\": 0}]"
+      }
+    ],
+    "edges": [
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"TORTILLAS\"",
+        "weight": 9.0,
+        "edge_type": "bridge",
+        "description": "\"uses: Tortillas serve as the base for the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"EXTRA VIRGIN OLIVE OIL\"",
+        "weight": 8.0,
+        "edge_type": "bridge",
+        "description": "\"uses: Olive oil is used to grease the skillet and sauté ingredients.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"GARLIC\"",
+        "weight": 7.0,
+        "edge_type": "bridge",
+        "description": "\"uses: Garlic is mixed into the marinara sauce for added flavor.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"MOZZARELLA CHEESE\"",
+        "weight": 9.0,
+        "edge_type": "bridge",
+        "description": "\"uses: Mozzarella cheese is spread and melted on the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"RED YELLOW OR GREEN BELL PEPPER (CAPSICUM)\"",
+        "weight": 8.0,
+        "edge_type": "bridge",
+        "description": "\"uses: Bell peppers are added on top of the melted cheese.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"ONIONS\"",
+        "weight": 8.0,
+        "edge_type": "bridge",
+        "description": "\"uses: Onions are used as toppings on the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"KALAMATA OLIVES\"",
+        "weight": 7.0,
+        "edge_type": "bridge",
+        "description": "\"uses: Olives are included as toppings on the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"BUTTON MUSHROOMS\"",
+        "weight": 7.0,
+        "edge_type": "bridge",
+        "description": "\"uses: Mushrooms are sautéed and added as toppings.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"CAST IRON SKILLET\"",
+        "weight": 9.0,
+        "edge_type": "bridge",
+        "description": "\"uses: The skillet is used to cook and broil the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"BROILER\"",
+        "weight": 9.0,
+        "edge_type": "bridge",
+        "description": "\"uses: The pizza is finished under the broiler for browning.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"BROIL\"",
+        "weight": 8.0,
+        "edge_type": "bridge",
+        "description": "\"method-for: Broiling is the technique used to finish the pizza.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"MEXICAN\"",
+        "weight": 9.0,
+        "edge_type": "bridge",
+        "description": "\"cuisine-type: The recipe is categorized under Mexican cuisine.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"DINNER\"",
+        "weight": 8.0,
+        "edge_type": "bridge",
+        "description": "\"course-type: The dish is designed to be served at dinner.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"VEGETARIAN\"",
+        "weight": 8.0,
+        "edge_type": "bridge",
+        "description": "\"diet-type: The recipe fits into the vegetarian diet category.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"PREPARATION TIME: {PREP_TIME}\"",
+        "weight": 7.0,
+        "edge_type": "bridge",
+        "description": "\"time-for: The labeled preparation duration for the recipe.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      },
+      {
+        "source": "\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\"",
+        "target": "\"COOKING TIME: {COOK_TIME}\"",
+        "weight": 7.0,
+        "edge_type": "bridge",
+        "description": "\"time-for: The labeled cooking duration for the recipe.\"",
+        "source_id": "chunk-8795e9750b7e4f1a17bb00382ea20c9c",
+        "order": 1
+      }
+    ]
+  }
+}

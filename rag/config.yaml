@@ -6,7 +6,7 @@ run_id: hackathon_demo
 logs_path: "./kgs"
 
 # Folder for the active graph you want to read/write (its <mode>/.hi_cache lives inside)
-cache_dir: "./kgs/sample_graph"
+cache_dir: "./kgs/alice"
 
 main_rag: "hi"
 

@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d7" for="edge" attr.name="order" attr.type="long"/>
+<key id="d6" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d5" for="edge" attr.name="description" attr.type="string"/>
+<key id="d4" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d3" for="node" attr.name="clusters" attr.type="string"/>
+<key id="d2" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d1" for="node" attr.name="description" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;">
+  <data key="d0">"RECIPE"</data>
+  <data key="d1">"A tortilla-based skillet pizza featuring roasted vegetables and mozzarella, typically served as a vegetarian dinner."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;TORTILLAS&quot;">
+  <data key="d0">"INGREDIENT"</data>
+  <data key="d1">"Flatbreads used as the base for the pizza."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;EXTRA VIRGIN OLIVE OIL&quot;">
+  <data key="d0">"INGREDIENT"</data>
+  <data key="d1">"High-quality oil used for greasing the skillet and sautéing."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;GARLIC&quot;">
+  <data key="d0">"INGREDIENT"</data>
+  <data key="d1">"A common seasoning used in the marinara sauce."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;MOZZARELLA CHEESE&quot;">
+  <data key="d0">"INGREDIENT"</data>
+  <data key="d1">"Cheese that melts and provides texture and flavor when baked."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;RED YELLOW OR GREEN BELL PEPPER (CAPSICUM)&quot;">
+  <data key="d0">"INGREDIENT"</data>
+  <data key="d1">"Sweet peppers that add color and flavor to the dish."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;ONIONS&quot;">
+  <data key="d0">"INGREDIENT"</data>
+  <data key="d1">"Vegetable added for sweetness and texture in the pizza."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;KALAMATA OLIVES&quot;">
+  <data key="d0">"INGREDIENT"</data>
+  <data key="d1">"Salty olives that provide a briny flavor to the pizza toppings."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;BUTTON MUSHROOMS&quot;">
+  <data key="d0">"INGREDIENT"</data>
+  <data key="d1">"Mushrooms that add earthiness and texture to the dish."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;CAST IRON SKILLET&quot;">
+  <data key="d0">"TOOL"</data>
+  <data key="d1">"A heavy skillet used for both cooking and baking the pizza."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;BROILER&quot;">
+  <data key="d0">"APPLIANCE"</data>
+  <data key="d1">"An oven feature used to apply high heat from above for browning."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;BROIL&quot;">
+  <data key="d0">"METHOD"</data>
+  <data key="d1">"A high-heat cooking technique used to brown the top of the pizza."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;MEXICAN&quot;">
+  <data key="d0">"CUISINE"</data>
+  <data key="d1">"Cuisine type indicating the style of the recipe."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;DINNER&quot;">
+  <data key="d0">"COURSE"</data>
+  <data key="d1">"Type of meal during which the dish is served."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;VEGETARIAN&quot;">
+  <data key="d0">"DIET"</data>
+  <data key="d1">"Diet label indicating that the dish contains no meat."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;PREPARATION TIME: {PREP_TIME}&quot;">
+  <data key="d0">"TIME"</data>
+  <data key="d1">"Placeholder for the explicit preparation duration needed for the recipe."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;COOKING TIME: {COOK_TIME}&quot;">
+  <data key="d0">"TIME"</data>
+  <data key="d1">"Placeholder for the explicit cooking duration needed for the recipe."</data>
+  <data key="d2">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;TORTILLAS&quot;">
+  <data key="d4">9.0</data>
+  <data key="d5">"uses: Tortillas serve as the base for the pizza."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;EXTRA VIRGIN OLIVE OIL&quot;">
+  <data key="d4">8.0</data>
+  <data key="d5">"uses: Olive oil is used to grease the skillet and sauté ingredients."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;GARLIC&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"uses: Garlic is mixed into the marinara sauce for added flavor."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;MOZZARELLA CHEESE&quot;">
+  <data key="d4">9.0</data>
+  <data key="d5">"uses: Mozzarella cheese is spread and melted on the pizza."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;RED YELLOW OR GREEN BELL PEPPER (CAPSICUM)&quot;">
+  <data key="d4">8.0</data>
+  <data key="d5">"uses: Bell peppers are added on top of the melted cheese."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;ONIONS&quot;">
+  <data key="d4">8.0</data>
+  <data key="d5">"uses: Onions are used as toppings on the pizza."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;KALAMATA OLIVES&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"uses: Olives are included as toppings on the pizza."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;BUTTON MUSHROOMS&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"uses: Mushrooms are sautéed and added as toppings."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;CAST IRON SKILLET&quot;">
+  <data key="d4">9.0</data>
+  <data key="d5">"uses: The skillet is used to cook and broil the pizza."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;BROILER&quot;">
+  <data key="d4">9.0</data>
+  <data key="d5">"uses: The pizza is finished under the broiler for browning."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;BROIL&quot;">
+  <data key="d4">8.0</data>
+  <data key="d5">"method-for: Broiling is the technique used to finish the pizza."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;MEXICAN&quot;">
+  <data key="d4">9.0</data>
+  <data key="d5">"cuisine-type: The recipe is categorized under Mexican cuisine."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;DINNER&quot;">
+  <data key="d4">8.0</data>
+  <data key="d5">"course-type: The dish is designed to be served at dinner."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;VEGETARIAN&quot;">
+  <data key="d4">8.0</data>
+  <data key="d5">"diet-type: The recipe fits into the vegetarian diet category."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;PREPARATION TIME: {PREP_TIME}&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"time-for: The labeled preparation duration for the recipe."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA&quot;" target="&quot;COOKING TIME: {COOK_TIME}&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"time-for: The labeled cooking duration for the recipe."</data>
+  <data key="d6">chunk-8795e9750b7e4f1a17bb00382ea20c9c</data>
+  <data key="d7">1</data>
+</edge>
+</graph></graphml>
