@@ -1,0 +1,6 @@
+# backend
+docker pull ghcr.io/ahmaddabbass/grace-backend:latest
+docker run --rm -p 8000:8000 -e OPENAI_API_KEY=sk-... ghcr.io/ahmaddabbass/grace-backend:latest
+# frontend
+docker pull ghcr.io/ahmaddabbass/grace-frontend:latest
+docker run --rm -p 5173:80 ghcr.io/ahmaddabbass/grace-frontend:latest
