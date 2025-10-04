@@ -1,0 +1,116 @@
+{
+  "ts": "2025-10-04T19:10:27.133255+00:00",
+  "run_id": "ui_default",
+  "qid": "q_1759605024265_df5bc2",
+  "query": "What is this recipe about",
+  "context": "\n-----Backgrounds-----\n```csv\n\"id\",\t\"content\"\n0,\t\"# Roasted Peppers and Mushroom Tortilla Pizza (Mexican, Vegetarian) — Broiler-Finished  This community revolves around the roasted peppers and mushroom tortilla pizza, which is characterized by its use of various fresh ingredients like mozzarella cheese and vegetables, cooked in a cast iron skillet, and finished under a broiler. The recipe is categorized as Mexican cuisine, is intended for dinner, and fits a vegetarian diet.  ## Core recipe composition and assembly  The roasted peppers and mushroom tortilla pizza is built on a base of tortillas, which are layered with sautéed vegetables, including bell peppers, onions, garlic, and button mushrooms, as well as mozzarella cheese. The method of using a cast iron skillet is critical since it allows for effective cooking on the stovetop followed by broiling to achieve optimal texture and flavor.  ## Significant ingredient list  Key ingredients include mozzarella cheese, button mushrooms, kalamata olives, onions, red, yellow, or green bell peppers, and extra virgin olive oil. Each ingredient contributes distinctive flavors and textures – the olive oil greases the skillet and helps sauté the vegetables, while the mozzarella cheese is essential for its melting properties, providing a rich complement to the fresh veggies.  ## Specific cooking methodology  The pizza uses broiling as a finishing method to achieve a nicely browned top. Broiling involves high heat applied from above, which is essential for melting the cheese and crisping the toppings. The use of a broiler requires careful monitoring to avoid burning, indicating the importance of safety in the cooking process.  ## Explicit time considerations  Although actual preparation and cooking times are indicated as placeholders, the overall structure of the recipe implies that these durations are critical for successfully executing the dish. Users need to adhere to timely sautéing and broiling to ensure the vegetables are cooked and the cheese is perfectly melted.  ## Categorization of cuisine and dietary label  The recipe is categorized under Mexican cuisine and is designated for dinner, which informs potential users about its suitability for specific meal occasions. Additionally, its classification as vegetarian emphasizes its meat-free nature, appealing to a specific dietary choice and potentially influencing consumer decisions.\"\n```\n-----Reasoning Path-----\n```csv\n\"id\",\t\"source\",\t\"target\",\t\"description\",\t\"weight\",\t\"rank\"\n0,\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"TORTILLAS\",\t\"uses: Tortillas serve as the base for the pizza.\",\t9.0,\t17\n1,\t\"MOZZARELLA CHEESE\",\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"uses: Mozzarella cheese is spread and melted on the pizza.\",\t9.0,\t17\n2,\t\"CAST IRON SKILLET\",\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"uses: The skillet is used to cook and broil the pizza.\",\t9.0,\t17\n3,\t\"MEXICAN\",\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"cuisine-type: The recipe is categorized under Mexican cuisine.\",\t9.0,\t17\n4,\t\"ONIONS\",\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"uses: Onions are used as toppings on the pizza.\",\t8.0,\t17\n5,\t\"PREPARATION TIME: {PREP_TIME}\",\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"time-for: The labeled preparation duration for the recipe.\",\t7.0,\t17\n6,\t\"BUTTON MUSHROOMS\",\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"uses: Mushrooms are sautéed and added as toppings.\",\t7.0,\t17\n7,\t\"COOKING TIME: {COOK_TIME}\",\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"time-for: The labeled cooking duration for the recipe.\",\t7.0,\t17\n8,\t\"GARLIC\",\t\"ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA\",\t\"uses: Garlic is mixed into the marinara sauce for added flavor.\",\t7.0,\t17\n```\n-----Detail Entity Information-----\n```csv\n\"id\",\t\"entity\",\t\"type\",\t\"description\",\t\"rank\"\n0,\t\"PREPARATION TIME: {PREP_TIME}\",\t\"TIME\",\t\"Placeholder for the explicit preparation duration needed for the recipe.\",\t1\n1,\t\"COOKING TIME: {COOK_TIME}\",\t\"TIME\",\t\"Placeholder for the explicit cooking duration needed for the recipe.\",\t1\n2,\t\"MEXICAN\",\t\"CUISINE\",\t\"Cuisine type indicating the style of the recipe.\",\t1\n```\n-----Source Documents-----\n```csv\n\"id\",\t\"content\"\n0,\t\"Recipe: Roasted Peppers And Mushroom Tortilla Pizza Recipe. \nCuisine: Mexican. Course: Dinner. Diet type: Vegetarian.  \nCategory: Pizza Recipes.  \nPreparation Time: {prep_time}\nCooking Time: {cook_time}\n\nIngredients:\nTortillas, Extra Virgin Olive Oil, Garlic, Mozzarella cheese, Red Yellow or Green Bell Pepper (Capsicum), Onions, Kalmatta olives, Button mushrooms. \n\nInstructions:\nTo begin making the Roasted Peppers And Mushroom Tortilla Pizza recipe, turn your oven setting to broiler and keep it ready. Grease your cast iron skillet with some olive oil and heat it over high heat. When it starts to shimmer bring down the heat to medium. Add olive oil and minced garlic to the marinara sauce and stir to combine, keep aside. Place one tortilla on the cast iron skillet. Spread a thin layer of marinara sauce over the tortilla. Spread the cheese as needed. When the cheese starts to melt, add in the toppings which includes onion, mushrooms, olives and bell peppers. Now shift the cast iron skillet to the oven which is already under broiler setting. When you see the cheese all melted and top starting to brown, remove and slice to serve. ServeÂ Roasted Peppers And Mushroom Tortilla PizzaÂ along withÂ |Â andÂ |Â for a weekend night dinner.. \n\nSummary:\nThis recipe belongs to the Mexican cuisine and is typically served as Dinner.  \nIt is a Vegeterian dish that uses Tortillas, Extra Virgin Olive Oil, Garlic, among other ingredients.\nReference: https://www.archanaskitchen.com/roasted-peppers-and-mushroom-tortilla-pizza-recipe\"\n```\n",
+  "node_hits": {
+    "use_communities": [
+      {
+        "id": 0,
+        "report_string": "# Roasted Peppers and Mushroom Tortilla Pizza (Mexican, Vegetarian) — Broiler-Finished  This community revolves around the roasted peppers and mushroom tortilla pizza, which is characterized by its use of various fresh ingredients like mozzarella cheese and vegetables, cooked in a cast iron skillet, and finished under a broiler. The recipe is categorized as Mexican cuisine, is intended for dinner, and fits a vegetarian diet.  ## Core recipe composition and assembly  The roasted peppers and mushroom tortilla pizza is built on a base of tortillas, which are layered with sautéed vegetables, including bell peppers, onions, garlic, and button mushrooms, as well as mozzarella cheese. The method of using a cast iron skillet is critical since it allows for effective cooking on the stovetop followed by broiling to achieve optimal texture and flavor.  ## Significant ingredient list  Key ingredients include mozzarella cheese, button mushrooms, kalamata olives, onions, red, yellow, or green bell peppers, and extra virgin olive oil. Each ingredient contributes distinctive flavors and textures – the olive oil greases the skillet and helps sauté the vegetables, while the mozzarella cheese is essential for its melting properties, providing a rich complement to the fresh veggies.  ## Specific cooking methodology  The pizza uses broiling as a finishing method to achieve a nicely browned top. Broiling involves high heat applied from above, which is essential for melting the cheese and crisping the toppings. The use of a broiler requires careful monitoring to avoid burning, indicating the importance of safety in the cooking process.  ## Explicit time considerations  Although actual preparation and cooking times are indicated as placeholders, the overall structure of the recipe implies that these durations are critical for successfully executing the dish. Users need to adhere to timely sautéing and broiling to ensure the vegetables are cooked and the cheese is perfectly melted.  ## Categorization of cuisine and dietary label  The recipe is categorized under Mexican cuisine and is designated for dinner, which informs potential users about its suitability for specific meal occasions. Additionally, its classification as vegetarian emphasizes its meat-free nature, appealing to a specific dietary choice and potentially influencing consumer decisions."
+      }
+    ],
+    "use_reasoning_path": [
+      {
+        "src_tgt": [
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA",
+          "TORTILLAS"
+        ],
+        "description": "uses: Tortillas serve as the base for the pizza.",
+        "weight": 9.0
+      },
+      {
+        "src_tgt": [
+          "MOZZARELLA CHEESE",
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA"
+        ],
+        "description": "uses: Mozzarella cheese is spread and melted on the pizza.",
+        "weight": 9.0
+      },
+      {
+        "src_tgt": [
+          "CAST IRON SKILLET",
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA"
+        ],
+        "description": "uses: The skillet is used to cook and broil the pizza.",
+        "weight": 9.0
+      },
+      {
+        "src_tgt": [
+          "MEXICAN",
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA"
+        ],
+        "description": "cuisine-type: The recipe is categorized under Mexican cuisine.",
+        "weight": 9.0
+      },
+      {
+        "src_tgt": [
+          "ONIONS",
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA"
+        ],
+        "description": "uses: Onions are used as toppings on the pizza.",
+        "weight": 8.0
+      },
+      {
+        "src_tgt": [
+          "PREPARATION TIME: {PREP_TIME}",
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA"
+        ],
+        "description": "time-for: The labeled preparation duration for the recipe.",
+        "weight": 7.0
+      },
+      {
+        "src_tgt": [
+          "BUTTON MUSHROOMS",
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA"
+        ],
+        "description": "uses: Mushrooms are sautéed and added as toppings.",
+        "weight": 7.0
+      },
+      {
+        "src_tgt": [
+          "COOKING TIME: {COOK_TIME}",
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA"
+        ],
+        "description": "time-for: The labeled cooking duration for the recipe.",
+        "weight": 7.0
+      },
+      {
+        "src_tgt": [
+          "GARLIC",
+          "ROASTED PEPPERS AND MUSHROOM TORTILLA PIZZA"
+        ],
+        "description": "uses: Garlic is mixed into the marinara sauce for added flavor.",
+        "weight": 7.0
+      }
+    ],
+    "node_datas": [
+      {
+        "entity_name": "PREPARATION TIME: {PREP_TIME}",
+        "entity_type": "TIME",
+        "description": "Placeholder for the explicit preparation duration needed for the recipe.",
+        "rank": 1
+      },
+      {
+        "entity_name": "COOKING TIME: {COOK_TIME}",
+        "entity_type": "TIME",
+        "description": "Placeholder for the explicit cooking duration needed for the recipe.",
+        "rank": 1
+      },
+      {
+        "entity_name": "MEXICAN",
+        "entity_type": "CUISINE",
+        "description": "Cuisine type indicating the style of the recipe.",
+        "rank": 1
+      }
+    ],
+    "use_text_units": [
+      {
+        "id": 0,
+        "content": "Recipe: Roasted Peppers And Mushroom Tortilla Pizza Recipe. \nCuisine: Mexican. Course: Dinner. Diet type: Vegetarian.  \nCategory: Pizza Recipes.  \nPreparation Time: {prep_time}\nCooking Time: {cook_time}\n\nIngredients:\nTortillas, Extra Virgin Olive Oil, Garlic, Mozzarella cheese, Red Yellow or Green Bell Pepper (Capsicum), Onions, Kalmatta olives, Button mushrooms. \n\nInstructions:\nTo begin making the Roasted Peppers And Mushroom Tortilla Pizza recipe, turn your oven setting to broiler and keep it ready. Grease your cast iron skillet with some olive oil and heat it over high heat. When it starts to shimmer bring down the heat to medium. Add olive oil and minced garlic to the marinara sauce and stir to combine, keep aside. Place one tortilla on the cast iron skillet. Spread a thin layer of marinara sauce over the tortilla. Spread the cheese as needed. When the cheese starts to melt, add in the toppings which includes onion, mushrooms, olives and bell peppers. Now shift the cast iron skillet to the oven which is already under broiler setting. When you see the cheese all melted and top starting to brown, remove and slice to serve. ServeÂ Roasted Peppers And Mushroom Tortilla PizzaÂ along withÂ |Â andÂ |Â for a weekend night dinner.. \n\nSummary:\nThis recipe belongs to the Mexican cuisine and is typically served as Dinner.  \nIt is a Vegeterian dish that uses Tortillas, Extra Virgin Olive Oil, Garlic, among other ingredients.\nReference: https://www.archanaskitchen.com/roasted-peppers-and-mushroom-tortilla-pizza-recipe"
+      }
+    ]
+  },
+  "answer": null
+}

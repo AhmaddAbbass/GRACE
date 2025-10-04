@@ -2,3 +2,52 @@
 2025-10-04 18:50:37,257 INFO: [INIT] Embedding func = OpenAIEmbedding
 2025-10-04 18:50:37,259 WARNING: [INIT] KV-store missing; run build_index
 2025-10-04 18:50:37,287 INFO: [build_index] inserting 600 docs
+2025-10-04 18:59:39,856 INFO: [INIT] HiRAGRunner mode=hi run_id=hackathon_demo
+2025-10-04 18:59:39,856 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 18:59:39,857 WARNING: [INIT] KV-store missing; run build_index
+2025-10-04 18:59:39,862 INFO: [build_index] inserting 600 docs
+2025-10-04 21:00:01,762 INFO: [INIT] HiRAGRunner mode=hi run_id=rebuild_kv
+2025-10-04 21:00:01,762 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 21:00:03,194 INFO: [INIT] KV-store loaded 0 chunks
+2025-10-04 21:03:47,803 INFO: [INIT] HiRAGRunner mode=hi run_id=rebuild_kv
+2025-10-04 21:03:47,803 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 21:03:48,353 INFO: [INIT] KV-store loaded 0 chunks
+2025-10-04 21:05:20,543 INFO: [INIT] HiRAGRunner mode=hi run_id=rebuild_kv
+2025-10-04 21:05:20,544 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 21:05:22,011 INFO: [INIT] KV-store loaded 0 chunks
+2025-10-04 21:08:28,931 INFO: [INIT] HiRAGRunner mode=hi run_id=rebuild_kv
+2025-10-04 21:08:28,932 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 21:08:29,502 INFO: [INIT] KV-store loaded 0 chunks
+2025-10-04 21:14:24,939 INFO: [INIT] HiRAGRunner mode=hi run_id=rebuild_kv
+2025-10-04 21:14:24,939 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 21:14:25,511 INFO: [INIT] KV-store loaded 0 chunks
+2025-10-04 21:19:48,505 INFO: [INIT] HiRAGRunner mode=hi run_id=rebuild_kv
+2025-10-04 21:19:48,507 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 21:19:49,884 INFO: [INIT] KV-store loaded 0 chunks
+2025-10-04 21:27:15,412 INFO: [INIT] HiRAGRunner mode=hi run_id=cooking_kg
+2025-10-04 21:27:15,414 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 21:27:16,151 INFO: [INIT] KV-store loaded 600 chunks
+2025-10-04 22:05:36,556 INFO: [INIT] HiRAGRunner mode=hi run_id=hackathon_demo
+2025-10-04 22:05:36,556 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 22:05:38,200 INFO: [INIT] KV-store loaded 600 chunks
+2025-10-04 22:05:38,203 INFO: [retrieve] 'Create me a new recipe which is  a mix of many recipes' top_k=8
+2025-10-04 22:05:40,013 INFO: [retrieve] parsed communities=19, path=224, entities=8, text_units=45
+2025-10-04 22:06:10,841 INFO: [retrieve] 'Create me a new recipe which is a mix of many recipes' top_k=3
+2025-10-04 22:06:13,173 INFO: [retrieve] parsed communities=8, path=54, entities=3, text_units=11
+2025-10-04 22:10:24,265 INFO: [retrieve] 'What is this recipe about' top_k=3
+2025-10-04 22:10:27,131 INFO: [retrieve] parsed communities=1, path=9, entities=3, text_units=1
+2025-10-04 22:12:50,907 INFO: [INIT] HiRAGRunner mode=hi run_id=trim_index
+2025-10-04 22:12:50,907 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 22:12:51,700 INFO: [INIT] KV-store loaded 600 chunks
+2025-10-04 22:18:16,666 INFO: [INIT] HiRAGRunner mode=hi run_id=trim_index
+2025-10-04 22:18:16,667 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 22:18:17,410 INFO: [INIT] KV-store loaded 600 chunks
+2025-10-04 22:20:46,181 INFO: [INIT] HiRAGRunner mode=hi run_id=trim_index
+2025-10-04 22:20:46,181 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 22:20:46,857 INFO: [INIT] KV-store loaded 600 chunks
+2025-10-04 22:22:42,421 INFO: [INIT] HiRAGRunner mode=hi run_id=trim_index
+2025-10-04 22:22:42,421 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 22:22:43,082 INFO: [INIT] KV-store loaded 600 chunks
+2025-10-04 22:24:29,439 INFO: [INIT] HiRAGRunner mode=hi run_id=trim_index
+2025-10-04 22:24:29,439 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 22:24:30,119 INFO: [INIT] KV-store loaded 600 chunks

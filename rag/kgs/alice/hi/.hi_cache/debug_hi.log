@@ -4,3 +4,17 @@
 2025-10-04 16:30:34,716 INFO: [build_index] inserting 1 docs
 2025-10-04 16:30:34,716 INFO: [build_index] disabling hierarchical mode for small batch
 2025-10-04 16:31:21,676 INFO: [INIT] KV-store loaded 1 chunks
+2025-10-04 22:04:33,149 INFO: [INIT] HiRAGRunner mode=hi run_id=hackathon_demo
+2025-10-04 22:04:33,149 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 22:04:33,219 INFO: [INIT] KV-store loaded 1 chunks
+2025-10-04 22:04:33,221 INFO: [retrieve] 'What is this recipe about' top_k=8
+2025-10-04 22:04:35,434 INFO: [retrieve] parsed communities=1, path=9, entities=8, text_units=1
+2025-10-04 22:05:36,556 INFO: [INIT] HiRAGRunner mode=hi run_id=hackathon_demo
+2025-10-04 22:05:36,556 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 22:05:38,200 INFO: [INIT] KV-store loaded 600 chunks
+2025-10-04 22:05:38,203 INFO: [retrieve] 'Create me a new recipe which is  a mix of many recipes' top_k=8
+2025-10-04 22:05:40,013 INFO: [retrieve] parsed communities=19, path=224, entities=8, text_units=45
+2025-10-04 22:06:10,841 INFO: [retrieve] 'Create me a new recipe which is a mix of many recipes' top_k=3
+2025-10-04 22:06:13,173 INFO: [retrieve] parsed communities=8, path=54, entities=3, text_units=11
+2025-10-04 22:10:24,265 INFO: [retrieve] 'What is this recipe about' top_k=3
+2025-10-04 22:10:27,131 INFO: [retrieve] parsed communities=1, path=9, entities=3, text_units=1

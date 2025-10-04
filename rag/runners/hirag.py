@@ -1,4 +1,4 @@
-# rag/runners/hirag.py
+﻿# rag/runners/hirag.py
 from pathlib import Path
 import json, logging, csv, io, re
 from typing import List, Tuple, Dict, Any, Optional
@@ -123,7 +123,7 @@ class HiRAGRunner(BaseRagRunner):
         csv_body, *_ = part.split("```", 1)
         return csv_body.strip()
 
-    # robust CSV→DataFrame even with stray commas
+    # robust CSVâ†’DataFrame even with stray commas
     def _parse_df(self, csv_text: str) -> pd.DataFrame:
         if not csv_text or not csv_text.strip():
             return pd.DataFrame()
@@ -151,7 +151,7 @@ class HiRAGRunner(BaseRagRunner):
         self.logger.info(f"[retrieve] {query!r} top_k={top_k}")
         param = QueryParam(mode=self.mode, only_need_context=True, top_k=top_k)
         result = self._rag.query(query, param)
-        empty_payload = {
+        empty_node_hits = {
             "use_communities":    [],
             "use_reasoning_path": [],
             "node_datas":         [],
@@ -159,7 +159,7 @@ class HiRAGRunner(BaseRagRunner):
         }
         if not result:
             self.logger.info("[retrieve] no results returned")
-            return empty_payload
+            return {"context": "", "node_hits": empty_node_hits}
 
         result_str = result if isinstance(result, str) else "\n".join(result)
 
@@ -207,7 +207,7 @@ class HiRAGRunner(BaseRagRunner):
             if not src_df.empty else []
         )
 
-        parsed = {
+        node_hits = {
             "use_communities":    use_communities,
             "use_reasoning_path": use_reasoning_path,
             "node_datas":         node_datas,
@@ -219,7 +219,7 @@ class HiRAGRunner(BaseRagRunner):
             f"path={len(use_reasoning_path)}, entities={len(node_datas)}, "
             f"text_units={len(use_text_units)}"
         )
-        return parsed
+        return {"context": result_str, "node_hits": node_hits}
 
     def build_index(self, docs: List[str]):
         self.logger.info(f"[build_index] inserting {len(docs)} docs")
@@ -296,24 +296,57 @@ class HiRAGRunner(BaseRagRunner):
         include_context: bool = True,
     ) -> Dict[str, Any]:
         top_k_value = top_k or getattr(self, "default_top_k", 8)
-        context = self.retrieve(query, top_k=top_k_value)
+        context_payload = self.retrieve(query, top_k=top_k_value)
+        node_hits = context_payload.get("node_hits", {})
 
         has_context = any(
-            bool(context.get(key))
+            bool(node_hits.get(key))
             for key in ("use_text_units", "use_communities", "use_reasoning_path", "node_datas")
         )
-        context_prompt = self._context_to_prompt(context) if has_context else ""
+        context_prompt = self._context_to_prompt(node_hits) if has_context else ""
 
+        used_model = model or self.answer_model
         response: Dict[str, Any] = {
-            "model": model or self.answer_model,
+            "model": used_model,
             "top_k": top_k_value,
         }
         if include_context:
-            response["context"] = context
+            response["context"] = context_payload
 
         if not context_prompt:
             response["answer"] = "I do not know. The retrieval index did not provide supporting context."
             return response
+
+        system_message = system_prompt or self.answer_system_prompt
+
+        user_prompt_lines = [
+            "You are answering a user question using retrieved context.",
+            "Use only the provided information; synthesise multiple snippets when useful.",
+            "If the context truly lacks the answer, reply: 'The provided context does not cover this.'",
+            "",
+            "Context:",
+            "```",
+            context_prompt,
+            "```",
+            "",
+            f"Question: {query}",
+        ]
+        user_prompt = "\n".join(user_prompt_lines)
+
+        client = self._get_chat_client()
+        completion = client.chat.completions.create(
+            model=used_model,
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_prompt},
+            ],
+        )
+        answer_text = completion.choices[0].message.content.strip() if completion.choices else ""
+        response["answer"] = answer_text or "(empty response)"
+        response["model"] = used_model
+        if include_context:
+            response["context"] = context_payload
+        return response
 
         used_model = model or self.answer_model
         system_message = system_prompt or self.answer_system_prompt
@@ -360,6 +393,8 @@ class HiRAGRunner(BaseRagRunner):
             )
         except Exception:
             return False
+
+
 
 
 

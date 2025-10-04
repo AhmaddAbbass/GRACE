@@ -1,15 +1,16 @@
+﻿rag_config_path: "../rag/config.yaml"
+graphs_root: "../rag/kgs"
+default_top_k: 8
+default_top_m: 2
+summary:
+  model: "gpt-4o-mini"
+  max_chunks: 4
+  max_chars_per_chunk: 600
+  prompt: |
+    You are a helpful assistant that writes short overviews of knowledge graphs. Mention the
+    domain focus, the kinds of entities/relationships captured, and the typical questions the
+    graph can answer. Aim for 4-6 sentences and avoid verbatim copying from the excerpts.
 app:
-  host: "0.0.0.0"
-  port: 8000
-  debug: false
-  allow_cors: true
-
-rag:
-  config_path: "../rag/config.yaml"
-  default_mode: "hi"
-  retrieve_top_k: 6
-  answer_top_k: 6
-  include_context: true
-
-logging:
-  level: "INFO"
+  cors_origins:
+    - "*"
+  auth_required: false

@@ -1,4 +1,4 @@
-"""hey user! this file is a hands-on tour of the rag toolkit.
+﻿"""hey user! this file is a hands-on tour of the rag toolkit.
 
 Example 1: Use the retriever as a context provider and inspect the raw nuggets that come back.
 Example 2: Compare retrieval output with different knobs (top_k, modes) so you understand how the cache behaves.
@@ -11,6 +11,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 from textwrap import indent
+from typing import Any
 
 from rag import RAG
 
@@ -21,24 +22,25 @@ def example_1_basic_context(query: str = "Who is mentioned in the book?", *, top
     """Retrieve context for a single query and pretty-print the pieces."""
     rag = RAG()
     context = rag.retrieve(query, top_k=top_k)
+    node_hits = context.get("node_hits", {})
 
     print("\n=== Example 1: Context provider ===")
     print(f"Query      : {query}")
     print(f"Top-k used : {top_k}")
     print("\nText units (chunk excerpts):")
-    for idx, unit in enumerate(context.get("use_text_units", []), 1):
+    for idx, unit in enumerate(node_hits.get("use_text_units", []), 1):
         preview = unit.get("content", "").strip()
         preview = preview[:240] + ("..." if len(preview) > 240 else "")
         print(indent(f"[{idx}] {preview}", "  "))
 
-    if context.get("node_datas"):
+    if node_hits.get("node_datas"):
         print("\nEntity mentions:")
-        for node in context["node_datas"]:
+        for node in node_hits["node_datas"]:
             print(indent(f"- {node.get('entity_name')} ({node.get('entity_type')}) :: {node.get('description')}", "  "))
 
-    if context.get("use_reasoning_path"):
+    if node_hits.get("use_reasoning_path"):
         print("\nReasoning path hops:")
-        for hop in context["use_reasoning_path"]:
+        for hop in node_hits["use_reasoning_path"]:
             src, tgt = hop.get("src_tgt", ("", ""))
             print(indent(f"{src} -> {tgt}: {hop.get('description')}", "  "))
 
@@ -52,22 +54,17 @@ def example_2_compare_modes(query: str = "What does the book talk about?", *, sm
     ctx_small = rag_default.retrieve(query, top_k=small_top_k)
     ctx_large = rag_default.retrieve(query, top_k=large_top_k)
 
-    def describe(label: str, ctx: dict[str, list[dict[str, str]]], top_k: int) -> None:
+    def describe(label: str, ctx: dict[str, Any], top_k: int) -> None:
         print(f"\n-- {label} (top_k={top_k})")
-        print(f"Chunks: {len(ctx.get('use_text_units', []))}, Entities: {len(ctx.get('node_datas', []))}")
-        for unit in ctx.get("use_text_units", [])[:2]:
-            preview = unit.get("content", "").strip()
+        node_hits = ctx.get("node_hits", {}) if isinstance(ctx, dict) else {}
+        text_units = node_hits.get("use_text_units", []) if isinstance(node_hits, dict) else []
+        entities = node_hits.get("node_datas", []) if isinstance(node_hits, dict) else []
+        print(f"Chunks: {len(text_units)}, Entities: {len(entities)}")
+        for unit in text_units[:2]:
+            preview = (unit or {}).get("content", "").strip()
             preview = preview[:200] + ("..." if len(preview) > 200 else "")
             print(indent(preview, "    "))
 
-    describe("Default settings", ctx_small, small_top_k)
-    describe("More context", ctx_large, large_top_k)
-
-    print("\nTip: if you add more modes to config.yaml (e.g. 'naive', 'graph'), instantiate RAG(mode='naive') to compare behaviour across runners.")
-
-# --------------------------------------------------------------------------------------
-# Example 3 ---------------------------------------------------------------------------
-# --------------------------------------------------------------------------------------
 def example_3_chat_loop(prompt: str = "You are a study buddy that answers with the provided context.") -> None:
     """Minimal chatbot shell that keeps querying until the user types 'exit'."""
     rag = RAG()
@@ -107,3 +104,6 @@ if __name__ == "__main__":
     example_2_compare_modes()
     example_3_chat_loop()  # uncomment to launch the interactive chatbot
     print_bonus_notes()
+
+
+

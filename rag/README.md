@@ -22,10 +22,11 @@ from rag import RAG
 rag = RAG()  # reads rag/config.yaml by default
 rag.build_from_file("rag/books/demo.txt")  # optional if you want to ingest programmatically
 context = rag.retrieve("Who is mentioned in the book?")
-print(context["node_datas"])
+print(context["node_hits"]["node_datas"])
 answer = rag.answer("Who is Al-Mutanabbi?", include_context=True)
 print(answer["answer"])
-print(len(answer["context"]["use_text_units"]), "chunks used")  # context payload mirrors rag.retrieve() output
+if "node_hits" in answer:
+    print(len(answer["node_hits"]["use_text_units"]), "chunks used")  # context payload mirrors rag.retrieve() output
 # You can override defaults per-call
 follow_up = rag.answer("Give me a concise bullet list for classroom use", top_k=6, system_prompt="Speak in teaching bullets.")
 print(follow_up["answer"])
@@ -42,7 +43,7 @@ rag = RAG(cache_dir="/tmp/kgs/cooking", logs_path="/tmp/kgs")
 - Pass overrides such as `RAG(cache_dir='/tmp/kgs/research', run_id='agent-run')` to keep experiments isolated.
 
 **Key methods**
-- `retrieve(query, top_k=8)` returns the structured context dict (`use_text_units`, `use_communities`, `use_reasoning_path`, `node_datas`).
+- `retrieve(query, top_k=8)` returns a dict with metadata (`ts`, `run_id`, `qid`), the raw CSV-style `context` string, and a `node_hits` payload (`use_text_units`, `use_communities`, `use_reasoning_path`, `node_datas`).
 - `answer(query, top_k=8, include_context=True, system_prompt=None, model=None)` wraps the built-in chat completion. Set `include_context=True` when you want the raw evidence, or override `model/system_prompt` per call.
 - `build_from_file(path)` / `build(docs)` let you ingest additional text before serving queries.
 
@@ -60,8 +61,8 @@ Or lean on the built-in answer helper:
 ```python
 rag = RAG()
 reply = rag.answer(user_msg, top_k=6, system_prompt='Act as a concise helpdesk agent.')
-if reply.get('context'):
-    store_context(reply['context'])  # log or display evidence
+if 'node_hits' in reply:
+    store_context(reply)  # log or display evidence
 return reply['answer']
 ```
 
