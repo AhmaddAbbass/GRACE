@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d7" for="edge" attr.name="order" attr.type="long"/>
+<key id="d6" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d5" for="edge" attr.name="description" attr.type="string"/>
+<key id="d4" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d3" for="node" attr.name="clusters" attr.type="string"/>
+<key id="d2" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d1" for="node" attr.name="description" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="&quot;AL-MUTANABBI&quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"Al-Mutanabbi is a historical figure known as a great Arabic poet whose works and influence are often discussed in literary contexts."&lt;SEP&gt;"Al-Mutanabbi is a renowned poet known for his mastery of verse, able to convey profound themes like dignity and ambition through his poetry."&lt;SEP&gt;"Al-Mutanabbi was a renowned poet whose works reflect the complexities of dignity and art, emphasizing the relationship between poetry and the city."</data>
+  <data key="d2">chunk-159c000077e24d5f6f111f5d9a93783b&lt;SEP&gt;chunk-c49ef9f889ea1761dd49cda3506ad5ea&lt;SEP&gt;chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;BAGHDAD&quot;">
+  <data key="d0">"GEO"</data>
+  <data key="d1">"Baghdad is a historic city characterized by its vibrant markets, diverse intellectual discourse, and a rich literary tradition, serving as a backdrop to Al-Mutanabbi's life and work."&lt;SEP&gt;"Baghdad is a historically significant city mentioned in relation to Al-Mutanabbi, symbolizing the interplay between urban life and poetic expression."&lt;SEP&gt;"Baghdad is the capital city of Iraq, known for its rich history and cultural significance, particularly during the Golden Age of Islam."</data>
+  <data key="d2">chunk-159c000077e24d5f6f111f5d9a93783b&lt;SEP&gt;chunk-c49ef9f889ea1761dd49cda3506ad5ea&lt;SEP&gt;chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;THE TIGRIS&quot;">
+  <data key="d0">"GEO"</data>
+  <data key="d1">"The Tigris is a significant river that flows through Baghdad, symbolizing the city's history and its connection to poetry and language."</data>
+  <data key="d2">chunk-c49ef9f889ea1761dd49cda3506ad5ea</data>
+  <data key="d3">[{"level": 0, "cluster": 2}]</data>
+</node>
+<node id="&quot;THE RIVER AND THE WORD&quot;">
+  <data key="d0">"EVENT"</data>
+  <data key="d1">"The River and the Word is a book that explores the relationship between language and power in Baghdad, particularly through the lens of Al-Mutanabbi's poetry."</data>
+  <data key="d2">chunk-c49ef9f889ea1761dd49cda3506ad5ea</data>
+  <data key="d3">[{"level": 0, "cluster": 2}]</data>
+</node>
+<node id="&quot;TIGRIS&quot;">
+  <data key="d0">"GEO"</data>
+  <data key="d1">"The Tigris River is a significant geographical feature that serves as a metaphorical representation of depth and complexity in both poetry and reality."</data>
+  <data key="d2">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;FIRST MERCHANTS&quot;">
+  <data key="d0">"ORGANIZATION"</data>
+  <data key="d1">"The First Merchants are referenced as figures in the bustling life of the city, emphasizing commerce and the dynamic nature of Baghdad."</data>
+  <data key="d2">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d3">[{"level": 0, "cluster": 0}]</data>
+</node>
+<node id="&quot;THE SCRIBE&quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"The Scribe is a figure associated with the literary traditions of the city, highlighting the process of writing and preserving poetry."</data>
+  <data key="d2">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d3">[{"level": 0, "cluster": 1}]</data>
+</node>
+<node id="&quot;THE STUDENT&quot;">
+  <data key="d0">"PERSON"</data>
+  <data key="d1">"The Student represents the pursuit of knowledge and the struggle inherent in learning, symbolizing the educational atmosphere of Baghdad."</data>
+  <data key="d2">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d3">[{"level": 0, "cluster": 1}]</data>
+</node>
+<edge source="&quot;AL-MUTANABBI&quot;" target="&quot;BAGHDAD&quot;">
+  <data key="d4">26.0</data>
+  <data key="d5">"Al-Mutanabbi's poetry is deeply intertwined with the essence of Baghdad, reflecting the city's culture, debates, and literary spirit."&lt;SEP&gt;"Al-Mutanabbi's poetry is intrinsically linked to the city of Baghdad, illustrating the city's influence on a poet's work."&lt;SEP&gt;"Al-Mutanabbi, as a renowned poet, is historically associated with Baghdad, contributing to the literary heritage of the city."</data>
+  <data key="d6">chunk-159c000077e24d5f6f111f5d9a93783b&lt;SEP&gt;chunk-c49ef9f889ea1761dd49cda3506ad5ea&lt;SEP&gt;chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;AL-MUTANABBI&quot;" target="&quot;THE RIVER AND THE WORD&quot;">
+  <data key="d4">10.0</data>
+  <data key="d5">"The River and the Word examines how Al-Mutanabbi's art shapes and reflects the dynamics of language and power in Baghdad."</data>
+  <data key="d6">chunk-c49ef9f889ea1761dd49cda3506ad5ea</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;AL-MUTANABBI&quot;" target="&quot;THE SCRIBE&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"Al-Mutanabbi's work involves the literary contributions that a scribe would help preserve and propagate."</data>
+  <data key="d6">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;AL-MUTANABBI&quot;" target="&quot;THE STUDENT&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"The Student's learning is cultivated through the poetic works of Al-Mutanabbi, linking education with poetic inspiration."</data>
+  <data key="d6">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;BAGHDAD&quot;" target="&quot;THE TIGRIS&quot;">
+  <data key="d4">8.0</data>
+  <data key="d5">"Baghdad is situated along the Tigris, which plays a crucial role in the city's symbolism and daily life, enriching its cultural landscape."</data>
+  <data key="d6">chunk-c49ef9f889ea1761dd49cda3506ad5ea</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;BAGHDAD&quot;" target="&quot;TIGRIS&quot;">
+  <data key="d4">8.0</data>
+  <data key="d5">"The Tigris River is central to the identity of Baghdad, reflecting the city's growth and cultural richness."</data>
+  <data key="d6">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;BAGHDAD&quot;" target="&quot;FIRST MERCHANTS&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"First Merchants engage in trade within Baghdad, contributing to its vibrancy and economic dynamism."</data>
+  <data key="d6">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;THE TIGRIS&quot;" target="&quot;THE RIVER AND THE WORD&quot;">
+  <data key="d4">7.0</data>
+  <data key="d5">"The Tigris serves as a metaphorical and literal flow that connects the themes explored in The River and the Word."</data>
+  <data key="d6">chunk-c49ef9f889ea1761dd49cda3506ad5ea</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;FIRST MERCHANTS&quot;" target="&quot;THE SCRIBE&quot;">
+  <data key="d4">5.0</data>
+  <data key="d5">"First Merchants may interact with The Scribe in terms of recording deals and transactions, central to the life of the city."</data>
+  <data key="d6">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d7">1</data>
+</edge>
+<edge source="&quot;THE SCRIBE&quot;" target="&quot;THE STUDENT&quot;">
+  <data key="d4">6.0</data>
+  <data key="d5">"The Scribe and The Student represent the transmission of knowledge and literary tradition within Baghdad."</data>
+  <data key="d6">chunk-8e7fe5cc0140b6c395101acdaee2fb10</data>
+  <data key="d7">1</data>
+</edge>
+</graph></graphml>

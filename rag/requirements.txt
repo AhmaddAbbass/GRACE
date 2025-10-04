@@ -1,0 +1,12 @@
+# core
+networkx==3.3
+pandas==2.2.3
+pyyaml
+tqdm
+
+# embedding options (pick what you use)
+sentence_transformers
+openai>=1.61.1
+
+# HiRAG (install your actual HiRAG package / local path separately)
+# e.g. pip install git+https://github.com/<org>/HiRAG.git
