@@ -1,0 +1,4 @@
+2025-10-04 18:50:37,257 INFO: [INIT] HiRAGRunner mode=hi run_id=hackathon_demo
+2025-10-04 18:50:37,257 INFO: [INIT] Embedding func = OpenAIEmbedding
+2025-10-04 18:50:37,259 WARNING: [INIT] KV-store missing; run build_index
+2025-10-04 18:50:37,287 INFO: [build_index] inserting 600 docs

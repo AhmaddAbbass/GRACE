@@ -1,4 +1,4 @@
-"""Minimal command-line helpers for the rag package."""
+﻿"""Minimal command-line helpers for the rag package."""
 from __future__ import annotations
 
 import argparse
@@ -9,7 +9,7 @@ from rag import RAG
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
 DEFAULT_CONFIG = PACKAGE_ROOT / "config.yaml"
-DEFAULT_BOOKS_DIR = PACKAGE_ROOT / "books"
+DEFAULT_BOOKS_DIR = PACKAGE_ROOT.parent / "books"
 
 
 def _resolve_book(path_str: str) -> Path:
@@ -35,7 +35,7 @@ def main(argv: list[str] | None = None) -> None:
     )
     parser.add_argument(
         "--book",
-        help="Path to a .txt file to ingest. Relative paths are resolved against the rag folder.",
+        help="Path to a .txt file to ingest. Defaults to ingest every .txt under the repo books folder.",
     )
     parser.add_argument("--skip-dump", action="store_true", help="Skip writing index.json")
     parser.add_argument("--dump-only", action="store_true", help="Only dump index.json without inserting new docs")
@@ -54,9 +54,18 @@ def main(argv: list[str] | None = None) -> None:
     if args.dump_only and args.book:
         parser.error("--dump-only may not be combined with --book")
 
-    if args.book and not args.dump_only:
-        book_path = _resolve_book(args.book)
-        rag.build_from_file(str(book_path))
+    # Ingest requested book or every .txt found under the default books root.
+    if not args.dump_only:
+        if args.book:
+            book_paths = [_resolve_book(args.book)]
+        else:
+            if not DEFAULT_BOOKS_DIR.exists():
+                parser.error(f"Books directory not found: {DEFAULT_BOOKS_DIR}")
+            book_paths = sorted(p for p in DEFAULT_BOOKS_DIR.rglob("*.txt") if p.is_file())
+            if not book_paths:
+                parser.error(f"No .txt files found under {DEFAULT_BOOKS_DIR}")
+        for book_path in book_paths:
+            rag.build_from_file(str(book_path))
 
     if not args.skip_dump:
         out_dir = Path(rag.cfg.get("graph_dir", rag.cfg["logdir"]))
@@ -69,4 +78,13 @@ def main(argv: list[str] | None = None) -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
 

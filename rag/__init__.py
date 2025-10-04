@@ -1,4 +1,4 @@
-# rag/__init__.py
+﻿# rag/__init__.py
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import sys
@@ -63,7 +63,10 @@ class RAG:
 
     def build_from_file(self, path: str) -> None:
         txt = Path(path).read_text(encoding="utf-8", errors="ignore")
-        self.build([txt])
+        docs = [chunk.strip() for chunk in txt.split("<sep>") if chunk.strip()]
+        if not docs:
+            docs = [txt]
+        self.build(docs)
 
     # ---- retrieve / answer ----------------------------------------------
     def retrieve(self, query: str, top_k: int = 8) -> Dict[str, Any]:
@@ -85,4 +88,5 @@ class RAG:
     # ---- health ----------------------------------------------------------
     def healthy(self) -> bool:
         return self.runner.health_check()
+
 
