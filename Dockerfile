@@ -13,7 +13,7 @@ RUN pip install --upgrade pip \
 
 # ✅ add the server deps explicitly
 RUN pip install flask flask-cors gunicorn
-
+RUN pip install "git+https://github.com/hhy-huang/HiRAG.git"
 # Copy code
 COPY . .
 
